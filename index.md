@@ -1,37 +1,96 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Cocos2d-html5 Hello World test</title>
+    <link rel="icon" type="image/GIF" href="res/favicon.ico"/>
 
-You can use the [editor on GitHub](https://github.com/niepantzy/niepantzy.github.com/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+    <meta name="viewport"
+        content="width=device-width,user-scalable=no,initial-scale=1, minimum-scale=1,maximum-scale=1"/>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+    <!--https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/MetaTags.html-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
 
-### Markdown
+    <!-- force webkit on 360 -->
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <!-- force edge on IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="msapplication-tap-highlight" content="no">
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+    <!-- force full screen on some browser -->
+    <meta name="full-screen" content="yes"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
 
-```markdown
-Syntax highlighted code block
+    <!-- force screen orientation on some browser -->
+    <!-- <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-orientation" content="portrait"> -->
 
-# Header 1
-## Header 2
-### Header 3
+    <meta name="browsermode" content="application">
+    <meta name="x5-page-mode" content="app">
 
-- Bulleted
-- List
+<style type="text/css">
+html {
+  -ms-touch-action: none;
+}
 
-1. Numbered
-2. List
+body, canvas, div {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
 
-**Bold** and _Italic_ and `Code` text
+body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  margin: 0;
 
-[Link](url) and ![Image](src)
-```
+  cursor: default;
+  color: #888;
+  background-color: #333;
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+  text-align: center;
+  font-family: Helvetica, Verdana, Arial, sans-serif;
 
-### Jekyll Themes
+  display: flex;
+  flex-direction: column;
+}
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/niepantzy/niepantzy.github.com/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+#Cocos2dGameContainer {
+  position: absolute;
+  margin: 0;
+  overflow: hidden;
+  left: 0px;
+  top: 0px;
 
-### Support or Contact
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: center;
+  -webkit-box-pack: center;
+}
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+canvas {
+  background-color: rgba(0, 0, 0, 0);
+}
+</style>
+</head>
+<body>
+<script src="res/loading.js"></script>
+<canvas id="gameCanvas" width="720" height="1280"></canvas>
+
+<script cocos src="game.min.js"></script>
+</body>
+</html>
